@@ -12,3 +12,7 @@ with open("input_day1.txt", 'r') as file:
 sum_loads = [sum(loads) for loads in elves_list]
 
 print("Most calories carried:", max(sum_loads))
+
+sum_loads_sorted = sorted([sum(loads) for loads in elves_list], reverse=True)
+
+print("Sum of top three calories carried:", sum(sum_loads_sorted[:3]))
